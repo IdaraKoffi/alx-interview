@@ -14,7 +14,3 @@ def print_triangle(triangle):
 
 if __name__ == "__main__":
     print_triangle(pascal_triangle(5))
-    print_triangle(pascal_triangle(0))  # Should return an empty list
-    print_triangle(pascal_triangle(1))  # Should return [[1]]
-    print_triangle(pascal_triangle(3))  # Should return [[1], [1, 1], [1, 2, 1]]
-
