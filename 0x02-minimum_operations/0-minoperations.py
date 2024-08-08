@@ -1,20 +1,20 @@
 #!/usr/bin/python3
 """
-This module contains the function minOperations
+Main file for testing
 """
+
 
 def minOperations(n):
     if n <= 1:
         return 0
 
-    operations = 0
-    factor = 2
+    total_operations = 0
+    divisor = 2
 
     while n > 1:
-        while n % factor == 0:
-            operations += factor
-            n //= factor
-        factor += 1
+        while n % divisor == 0:
+            total_operations += divisor
+            n /= divisor
+        divisor += 1
 
-    return operations
-
+    return total_operations
