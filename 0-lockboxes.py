@@ -1,20 +1,21 @@
 #!/usr/bin/python3
-def canUnlockAll(boxes):
-    # Number of boxes
-    n = len(boxes)
-    # Set to track opened boxes
-    opened_boxes = set([0])
-    # Stack for DFS traversal
-    stack = [0]
-    # Traverse until no more boxes can be opened
-    while stack:
-        current_box = stack.pop()
-        # Get the keys inside the current box
-        for key in boxes[current_box]:
-            # Check if the box corresponding to the key hasn't been opened
-            if key < n and key not in opened_boxes:
-                opened_boxes.add(key)
-                stack.append(key)
+"""method that determines if all the boxes can be opened"""
 
-    # If the number of opened boxes equals the number of boxes, return True
-    return len(opened_boxes) == n
+def canUnlockAll(boxes):
+
+    if (type(boxes) is not list):
+        return False
+
+    if (len(boxes) == 0):
+        return False
+
+    keys = [0]
+    for i in keys:
+        for j in boxes[i]:
+            if j not in keys and j != i and j < len(boxes) and j != 0:
+                keys.append(j)
+    if len(keys) == len(boxes):
+        return True
+    else:
+        return False
+
