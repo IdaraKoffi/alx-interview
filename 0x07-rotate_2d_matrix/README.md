@@ -11,3 +11,6 @@ This project implements an in-place algorithm to rotate a 2D matrix by 90 degree
 1. Make the files executable:
    ```bash
    chmod +x 0-rotate_2d_matrix.py main_0.py
+
+##Author
+Idara
